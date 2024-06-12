@@ -75,7 +75,7 @@
       a:hover {
         background-color: var(--text-color);
         color: var(--btn-background-color);
-        border: 2px solid var(--btn-background-color)
+        border: 2px solid var(--btn-background-color);
       }
       h1,
       h3 {
@@ -88,7 +88,6 @@
       }
 
       .toggle-container {
-
         margin: 20px 0;
         display: flex;
         justify-content: center;
@@ -131,7 +130,6 @@
         background-color: var(--btn-background-color);
         border-radius: 15px;
         transition: left 0.3s;
-
       }
 
       #option2.active ~ .toggle-button {
@@ -176,7 +174,7 @@
       <h3>IDE</h3>
       <a href="https://visualstudio.microsoft.com/ru/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&passive=false&cid=2030" target="_blank"><img src="icons/visualstudio-plain.svg" alt="" />Visual Studio</a>
       <a href="https://code.visualstudio.com/download" target="_blank"><img src="icons/vscode-original.svg" alt="" />VS Code</a>
-      <a href="https://www.jetbrains.com/pycharm/download/?section=windows" target="_blank"><img src="icons/pycharm.svg" alt="">PyCharm</a>
+      <a href="https://www.jetbrains.com/pycharm/download/?section=windows" target="_blank"><img src="icons/pycharm.svg" alt="" />PyCharm</a>
       <a href="https://www.sublimetext.com/download" target="_blank"><img src="icons/Simlime Text.svg" alt="" />Sublime Text</a>
       <a href="https://atom-editor.cc/" target="_blank"><img src="icons/Atom.svg" alt="" />Atom</a>
       <h3>Programming languages & frameworks</h3>
@@ -192,11 +190,12 @@
       <h1>Windows</h1>
       <a href="https://www.microsoft.com/en-us/software-download/windows10" target="_blank"><img src="icons/windows8-original.svg" alt="" />Windows 10</a>
       <a href="https://www.microsoft.com/software-download/windows11" target="_blank"><img src="icons/Windows 11.svg" alt="" />Windows 11</a>
-      <a href="активация винды.bat" download><img src="icons/Microsoft.svg" alt="">windows activation</a>
+      <a href="активация винды.bat" download><img src="icons/Microsoft.svg" alt="" />windows activation</a>
       <a href="для офиса команды.txt" download=""><img src="icons/Microsoft Word.svg" alt="" />MS Office</a>
     </div>
 
     <script>
+      let currentOption = "option1";
       document.addEventListener("DOMContentLoaded", (event) => {
         const option1 = document.getElementById("option1");
         const option2 = document.getElementById("option2");
@@ -208,18 +207,20 @@
         const option2 = document.getElementById("option2");
         const toggleButton = document.getElementById("toggleButton");
         const body = document.getElementsByTagName("body")[0];
-        if (option === "option1") {
+        if (option === "option1" && option !== currentOption) {
           option1.classList.add("active");
           option2.classList.remove("active");
           toggleButton.style.left = "0";
           body.classList.toggle("dark");
           body.classList.toggle("light");
-        } else if (option === "option2") {
+          currentOption = option;
+        } else if (option === "option2" && option !== currentOption) {
           option1.classList.remove("active");
           option2.classList.add("active");
           toggleButton.style.left = "50%";
           body.classList.toggle("dark");
           body.classList.toggle("light");
+          currentOption = option;
         }
       }
     </script>

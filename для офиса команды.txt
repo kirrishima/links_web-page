@@ -1,0 +1,9 @@
+PowerShell от имени админа, еще желательно впн на серевере Америки
+
+Set-WinHomeLocation -GeoId 244
+Remove-Item -Path HKCU:\SOFTWARE\Microsoft\Office\16.0\Common\Experiment -Recurse -Force -ErrorAction Ignore
+Remove-Item -Path HKCU:\SOFTWARE\Microsoft\Office\16.0\Common\ExperimentConfigs -Recurse -Force -ErrorAction Ignore
+Remove-Item -Path HKCU:\SOFTWARE\Microsoft\Office\16.0\Common\ExperimentEcs -Recurse -Force -ErrorAction Ignore
+
+переходишь в путь, в папку куда сохранил office и там запускаешь
+.\setup.exe /configure .\configuration-Office2021Enterprise.xml

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --background-color: rgb(35, 39, 47);
+        --body-bg-color: #121212;
+        --text-color: rgb(88, 196, 220);
+        --btn-background-color: rgb(52, 58, 70);
+        --h1-color: rgb(229, 231, 235);
+      }
+      .dark {
+        --background-color: rgb(35, 39, 47);
+        --body-bg-color: #121212;
+        --text-color: rgb(88, 196, 220);
+        --btn-background-color: rgb(52, 58, 70);
+        --h1-color: rgb(229, 231, 235);
+      }
+      .light {
+        --background-color: rgb(246, 247, 249);
+        --body-bg-color: rgb(229, 231, 235);
+        --text-color: #ffffff;
+        --btn-background-color: #66a5ad;
+        --h1-color: rgb(41, 45, 53);
+      }
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        background-color: var(--body-bg-color);
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px !important;
+        width: 100%;
+        padding: 20px;
+        background-color: var(--background-color);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+
+      a {
+        box-sizing: border-box;
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-decoration: none;
+        background-color: var(--btn-background-color);
+        color: var(--text-color);
+        padding: 15px;
+        margin: 10px 0;
+        text-align: center;
+        border-radius: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      img {
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+      }
+      a:hover {
+        background-color: var(--text-color);
+        color: var(--btn-background-color);
+        border: 2px solid var(--btn-background-color)
+      }
+      h1,
+      h3 {
+        color: var(--h1-color);
+        text-align: center;
+        grid-column: 1 / -1;
+      }
+      h3 {
+        margin: 0px;
+      }
+
+      .toggle-container {
+
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .toggle {
+        display: flex;
+        position: relative;
+        width: 300px;
+        height: 50px;
+        background-color: hsl(200, 100%, 15%);
+        border-radius: 15px;
+        overflow: hidden;
+      }
+
+      .toggle-option {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1;
+      }
+
+      #option1.active,
+      #option2.active {
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--text-color);
+      }
+
+      .toggle-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: var(--btn-background-color);
+        border-radius: 15px;
+        transition: left 0.3s;
+
+      }
+
+      #option2.active ~ .toggle-button {
+        left: 50%;
+      }
+      @media (min-width: 600px) {
+        .container {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body class="dark">
+    <div class="toggle-container">
+      <div class="toggle">
+        <div class="toggle-button" id="toggleButton"></div>
+        <div class="toggle-option" id="option1" onclick="toggleOption('option1')">Dark</div>
+        <div class="toggle-option" id="option2" onclick="toggleOption('option2')">Light</div>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Social Media</h1>
+      <a href="https://desktop.telegram.org/?setln=en" target="_blank"><img src="icons/Telegram.svg" alt="" /> Telegram</a>
+      <a href="https://discord.com/download" target="_blank"><img src="icons/Discord.svg" alt="" />Discord</a>
+
+      <h1>Entertainment</h1>
+      <a href="https://github.com/SpotX-Official/SpotX" target="_blank"><img src="icons/Spotify.svg" alt="" />Spotify</a>
+
+      <a href="https://store.steampowered.com/about/" target="_blank"><img src="icons/Steam.svg" alt="" />Steam</a>
+      <a href="https://store.epicgames.com/en-US/download" target="_blank"><img src="icons/Epic Games.svg" alt="" />Epic Games Launcher</a>
+      <h1>Other</h1>
+      <a href="https://windscribe.com/download" target="_blank">Windscribe</a>
+      <a href="https://www.google.by/intl/ru/chrome/" target="_blank"><img src="icons/Google Chrome.svg" alt="" />Chrome</a>
+
+      <a href="https://www.nvidia.com/Download/index.aspx?lang=ru" target="_blank"><img src="icons/nvidia.svg" alt="" />Nvidia</a>
+
+      <a href="https://www.logitechg.com/en-us/innovation/g-hub.html" target="_blank"><img src="icons/logitech.svg" alt="" />Logitech G HUB</a>
+      <a href="https://red-square.org/keyrox-tkl-classic-b.html#:~:text=USB%202.0%20%D0%9F%D0%BE%D1%80%D1%82-,%D0%94%D0%A0%D0%90%D0%99%D0%92%D0%95%D0%A0,-%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B5%20%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%BB%D1%8F" target="_blank">Red Square software</a>
+      <h1>Coding</h1>
+      <h3>IDE</h3>
+      <a href="https://visualstudio.microsoft.com/ru/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&passive=false&cid=2030" target="_blank"><img src="icons/visualstudio-plain.svg" alt="" />Visual Studio</a>
+      <a href="https://code.visualstudio.com/download" target="_blank"><img src="icons/vscode-original.svg" alt="" />VS Code</a>
+      <a href="https://www.jetbrains.com/pycharm/download/?section=windows" target="_blank"><img src="icons/pycharm.svg" alt="">PyCharm</a>
+      <a href="https://www.sublimetext.com/download" target="_blank"><img src="icons/Simlime Text.svg" alt="" />Sublime Text</a>
+      <a href="https://atom-editor.cc/" target="_blank"><img src="icons/Atom.svg" alt="" />Atom</a>
+      <h3>Programming languages & frameworks</h3>
+      <a href="https://www.python.org/downloads/" target="_blank"> <img src="icons/python.svg" alt="" />Python</a>
+      <a href="https://nodejs.org/en/download/package-manager" target="_blank"><img src="icons/nodejs.svg" alt="" />Node.js</a>
+      <a href="https://www.ruby-lang.org/en/downloads/"><img src="icons/Property 1=ruby-original.svg" alt="" />Ruby</a>
+      <a href="https://www.java.com/en/download/" target="_blank"><img src="icons/java.svg" alt="" />Java</a>
+      <a href="https://react.dev/learn/installation" target="_blank"><img src="icons/Programming logos and icons by hrhasnai (35).svg" alt="" />React</a>
+      <a href="https://www.mysql.com/downloads/"><img src="icons/mysql.svg" alt="" />mySQL</a>
+      <h3>Tools</h3>
+      <a href="https://git-scm.com/downloads" target="_blank"><img src="icons/git.svg" alt="" />git</a>
+      <a href="https://releases.llvm.org/download.html" target="_blank">LLVM</a>
+      <h1>Windows</h1>
+      <a href="https://www.microsoft.com/en-us/software-download/windows10" target="_blank"><img src="icons/windows8-original.svg" alt="" />Windows 10</a>
+      <a href="https://www.microsoft.com/software-download/windows11" target="_blank"><img src="icons/Windows 11.svg" alt="" />Windows 11</a>
+      <a href="активация винды.bat" download><img src="icons/Microsoft.svg" alt="">windows activation</a>
+      <a href="для офиса команды.txt" download=""><img src="icons/Microsoft Word.svg" alt="" />MS Office</a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const option1 = document.getElementById("option1");
+        const option2 = document.getElementById("option2");
+        option1.classList.add("active");
+      });
+
+      function toggleOption(option) {
+        const option1 = document.getElementById("option1");
+        const option2 = document.getElementById("option2");
+        const toggleButton = document.getElementById("toggleButton");
+        const body = document.getElementsByTagName("body")[0];
+        if (option === "option1") {
+          option1.classList.add("active");
+          option2.classList.remove("active");
+          toggleButton.style.left = "0";
+          body.classList.toggle("dark");
+          body.classList.toggle("light");
+        } else if (option === "option2") {
+          option1.classList.remove("active");
+          option2.classList.add("active");
+          toggleButton.style.left = "50%";
+          body.classList.toggle("dark");
+          body.classList.toggle("light");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+.dark {
+  --background-color: rgb(35, 39, 47);
+  --body-bg-color: #121212;
+  --text-color: rgb(88, 196, 220);
+  --btn-background-color: rgb(52, 58, 70);
+  --h1-color: rgb(229, 231, 235);
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  --dropdown-bg: color-mix(in srgb, var(--btn-background-color) 100%, var(--h1-color) 10%);
+}
+.light {
+  --background-color: rgb(246, 247, 249);
+  --body-bg-color: rgb(229, 231, 235);
+  --text-color: #ffffff;
+  --btn-background-color: #66a5ad;
+  --h1-color: rgb(41, 45, 53);
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  --dropdown-bg: color-mix(in srgb, var(--btn-background-color) 100%, var(--text-color) 50%);
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--body-bg-color);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px !important;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+}
+
+a {
+  border: 3.5px solid transparent;
+  box-sizing: border-box;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--btn-background-color);
+  color: var(--text-color);
+  padding: 15px;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  overflow: hidden;
+  /* width: 100%; */
+}
+
+a .text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  max-width: 100%;
+}
+img,
+svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  fill: var(--text-color);
+}
+
+h1,
+h3 {
+  color: var(--h1-color);
+  text-align: center;
+  grid-column: 1 / -1;
+}
+h3 {
+  margin: 0px;
+}
+.link-with-dropdown {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.link-with-dropdown:hover {
+  background-color: var(--dropdown-bg);
+}
+
+.link-with-dropdown:hover .dropdown-label a {
+  background-color: var(--btn-background-color);
+  color: var(--text-color);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.dropdown-label {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  box-sizing: border-box;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  padding: 10px 3.5px;
+  background-color: var(--dropdown-bg);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 100%;
+}
+
+.link-with-dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.toggle-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.toggle {
+  display: flex;
+  position: relative;
+  width: 300px;
+  height: 50px;
+  background-color: hsl(200, 100%, 15%);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.toggle-option {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#option1.active,
+#option2.active {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: var(--btn-background-color);
+  border-radius: 15px;
+  transition: left 0.3s;
+}
+
+#option2.active ~ .toggle-button {
+  left: 50%;
+}
+
+@media (min-width: 480px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+    row-gap: 20px;
+  }
+  a:hover {
+    background-color: var(--text-color);
+    color: var(--btn-background-color);
+    border-color: var(--btn-background-color);
+  }
+  a:hover svg {
+    fill: var(--btn-background-color);
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    width: 100%;
+  }
+  .container > a,
+  .link-with-dropdown {
+    width: 90%;
+  }
+}

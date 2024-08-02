@@ -3,182 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      :root {
-        --background-color: rgb(35, 39, 47);
-        --body-bg-color: #121212;
-        --text-color: rgb(88, 196, 220);
-        --btn-background-color: rgb(52, 58, 70);
-        --h1-color: rgb(229, 231, 235);
-        --box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-      }
-      .dark {
-        --background-color: rgb(35, 39, 47);
-        --body-bg-color: #121212;
-        --text-color: rgb(88, 196, 220);
-        --btn-background-color: rgb(52, 58, 70);
-        --h1-color: rgb(229, 231, 235);
-        --box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-      }
-      .light {
-        --background-color: rgb(246, 247, 249);
-        --body-bg-color: rgb(229, 231, 235);
-        --text-color: #ffffff;
-        --btn-background-color: #66a5ad;
-        --h1-color: rgb(41, 45, 53);
-        --box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      }
-      body {
-        margin: 0;
-        font-family: "Roboto", sans-serif;
-        background-color: var(--body-bg-color);
-        color: #ffffff;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
-      }
-
-      .container {
-        max-width: 1200px !important;
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-        background-color: var(--background-color);
-        border-radius: 8px;
-        box-shadow: var(--box-shadow);
-      }
-
-      a {
-        border: 3.5px solid transparent;
-        box-sizing: border-box;
-        height: 54px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        background-color: var(--btn-background-color);
-        color: var(--text-color);
-        padding: 15px;
-        margin: 10px 0;
-        text-align: center;
-        border-radius: 15px;
-        font-size: 16px;
-        font-weight: bold;
-        transition: background-color 0.3s, color 0.3s;
-        /* width: 100%; */
-        max-width: 100%;
-        overflow: hidden; /* Обеспечивает обрезку содержимого */
-      }
-
-      a .text {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        display: block;
-        max-width: 100%;
-      }
-      img {
-        width: 24px;
-        height: 24px;
-        margin-right: 5px;
-      }
-
-      h1,
-      h3 {
-        color: var(--h1-color);
-        text-align: center;
-        grid-column: 1 / -1;
-      }
-      h3 {
-        margin: 0px;
-      }
-
-      .toggle-container {
-        margin: 20px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-      }
-
-      .toggle {
-        display: flex;
-        position: relative;
-        width: 300px;
-        height: 50px;
-        background-color: hsl(200, 100%, 15%);
-        border-radius: 15px;
-        overflow: hidden;
-      }
-
-      .toggle-option {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        z-index: 1;
-      }
-
-      #option1.active,
-      #option2.active {
-        font-size: 20px;
-        font-weight: bold;
-        color: var(--text-color);
-      }
-
-      .toggle-button {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50%;
-        height: 100%;
-        background-color: var(--btn-background-color);
-        border-radius: 15px;
-        transition: left 0.3s;
-      }
-
-      #option2.active ~ .toggle-button {
-        left: 50%;
-      }
-
-      @media (min-width: 480px) {
-        .container {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-          gap: 10px;
-        }
-        a:hover {
-          background-color: var(--text-color);
-          color: var(--btn-background-color);
-          border-color: var(--btn-background-color);
-        }
-      }
-      @media (max-width: 480px) {
-        .container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        a {
-          width: 90%;
-        }
-      }
-    </style>
+    <title>Useful links</title>
+    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <style></style>
   </head>
   <body class="dark">
+    <svg style="display: none">
+      <defs>
+        <symbol id="icon1" viewBox="0 -960 960 960">
+          <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-42-68v-80.67q-34.33 0-58.17-25.16Q356-279 356-313.33V-356L155.33-556.67q-4.33 19.34-6.5 38.34-2.16 19-2.16 38.33 0 127 82.83 222T438-148Zm288-106q21.33-23.33 37.67-49.83 16.33-26.5 27.5-55.34 11.16-28.83 16.66-59.16 5.5-30.34 5.5-61.67 0-103.33-56.83-188T604.67-791.33V-774q0 34.33-23.84 59.5-23.83 25.17-58.16 25.17H438v84.66q0 17-12.83 28.17-12.84 11.17-29.84 11.17h-82V-480h252q17 0 28.17 12.5 11.17 12.5 11.17 29.5v124.67h42q28 0 49.66 16.5Q718-280.33 726-254Z" />
+        </symbol>
+      </defs>
+    </svg>
     <div class="toggle-container">
       <div class="toggle">
         <div class="toggle-button" id="toggleButton"></div>
-        <div class="toggle-option" id="option1" onclick="toggleOption('option1')">Dark</div>
-        <div class="toggle-option" id="option2" onclick="toggleOption('option2')">Light</div>
+        <div class="toggle-option" id="option-dark" onclick="toggleOption('option-dark')">Dark</div>
+        <div class="toggle-option" id="option-light" onclick="toggleOption('option-light')">Light</div>
       </div>
     </div>
     <div class="container">
+      <h1>Icons</h1>
+      <div class="link-with-dropdown">
+        <div class="dropdown-menu">
+          <div class="dropdown-label">
+            <a><span class="text">Icons by devicon</span></a>
+          </div>
+          <div class="dropdown-content">
+            <a href="https://devicon.dev/" target="_blank">
+              <svg class="icon">
+                <use href="#icon1"></use></svg
+              ><span class="text">Website</span></a
+            >
+            <a href="https://github.com/devicons/devicon" target="_blank"><img src="icons/github-original.svg" alt="" /><span class="text">Github</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="link-with-dropdown">
+        <div class="dropdown-menu">
+          <div class="dropdown-label">
+            <a><span class="text">Icons by Google</span></a>
+          </div>
+          <div class="dropdown-content">
+            <a href="https://fonts.google.com/icons" target="_blank">
+              <svg class="icon">
+                <use href="#icon1"></use></svg
+              ><span class="text">Website</span></a
+            >
+            <a href="https://github.com/google/material-design-icons" target="_blank"><img src="icons/github-original.svg" alt="" /><span class="text">Github</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="link-with-dropdown">
+        <div class="dropdown-menu">
+          <div class="dropdown-label">
+            <a><span class="text">Icons by Feather</span></a>
+          </div>
+          <div class="dropdown-content">
+            <a href="https://feathericons.com/" target="_blank">
+              <svg class="icon">
+                <use href="#icon1"></use></svg
+              ><span class="text">Website</span></a
+            >
+            <a href="https://github.com/feathericons/feather" target="_blank"><img src="icons/github-original.svg" alt="" /><span class="text">Github</span></a>
+          </div>
+        </div>
+      </div>
+      <a href="https://www.streamlinehq.com/?ref=feathericons&utm_source=feather-icons&utm_medium=partner&utm_campaign=expand-your-collection-170000-icons&tab=all" target="_blank"><span class="text">Streamlinehq</span></a>
       <h1>Social Media</h1>
       <a href="https://desktop.telegram.org/?setln=en" target="_blank">
         <img src="icons/Telegram.svg" alt="Telegram" />
@@ -290,7 +183,7 @@
         <img src="icons/Windows 11.svg" alt="Windows 11" />
         <span class="text">Windows 11</span>
       </a>
-      <a href="активация винды.bat" download>
+      <a href="run_as_admin_windows_activation.bat" download>
         <img src="icons/Microsoft.svg" alt="Windows Activation" />
         <span class="text">Windows Activation</span>
       </a>
@@ -301,26 +194,26 @@
     </div>
 
     <script>
-      let currentOption = "option1";
+      let currentOption = "option-dark";
       document.addEventListener("DOMContentLoaded", (event) => {
-        const option1 = document.getElementById("option1");
-        const option2 = document.getElementById("option2");
+        const option1 = document.getElementById("option-dark");
+        const option2 = document.getElementById("option-light");
         option1.classList.add("active");
       });
 
       function toggleOption(option) {
-        const option1 = document.getElementById("option1");
-        const option2 = document.getElementById("option2");
+        const option1 = document.getElementById("option-dark");
+        const option2 = document.getElementById("option-light");
         const toggleButton = document.getElementById("toggleButton");
         const body = document.getElementsByTagName("body")[0];
-        if (option === "option1" && option !== currentOption) {
+        if (option === "option-dark" && option !== currentOption) {
           option1.classList.add("active");
           option2.classList.remove("active");
           toggleButton.style.left = "0";
           body.classList.toggle("dark");
           body.classList.toggle("light");
           currentOption = option;
-        } else if (option === "option2" && option !== currentOption) {
+        } else if (option === "option-light" && option !== currentOption) {
           option1.classList.remove("active");
           option2.classList.add("active");
           toggleButton.style.left = "50%";

@@ -27,7 +27,7 @@
       <h1>Icons</h1>
       <div class="link-with-dropdown">
         <div class="dropdown-menu">
-          <div class="dropdown-label">
+          <div class="dropdown-label" onclick="toggleDropdown(event)">
             <a><span class="text">Icons by devicon</span></a>
           </div>
           <div class="dropdown-content">
@@ -42,7 +42,7 @@
       </div>
       <div class="link-with-dropdown">
         <div class="dropdown-menu">
-          <div class="dropdown-label">
+          <div class="dropdown-label" onclick="toggleDropdown(event)">
             <a><span class="text">Icons by Google</span></a>
           </div>
           <div class="dropdown-content">
@@ -58,7 +58,7 @@
 
       <div class="link-with-dropdown">
         <div class="dropdown-menu">
-          <div class="dropdown-label">
+          <div class="dropdown-label" onclick="toggleDropdown(event)">
             <a><span class="text">Icons by Feather</span></a>
           </div>
           <div class="dropdown-content">
@@ -222,6 +222,23 @@
           currentOption = option;
         }
       }
+      function toggleDropdown(event) {
+        const windowWidth = window.innerWidth;
+        if (windowWidth < 480) {
+          const dropdownMenu = event.currentTarget.closest(".dropdown-menu");
+          dropdownMenu.classList.toggle("open");
+        }
+      }
+
+      document.addEventListener("click", function (event) {
+        const isClickInside = event.target.closest(".link-with-dropdown");
+        if (!isClickInside) {
+          const openDropdowns = document.querySelectorAll(".dropdown-menu.open");
+          openDropdowns.forEach((menu) => {
+            menu.classList.remove("open");
+          });
+        }
+      });
     </script>
   </body>
 </html>

@@ -12,185 +12,256 @@
     <svg style="display: none">
       <defs>
         <symbol id="icon1" viewBox="0 -960 960 960">
-          <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-42-68v-80.67q-34.33 0-58.17-25.16Q356-279 356-313.33V-356L155.33-556.67q-4.33 19.34-6.5 38.34-2.16 19-2.16 38.33 0 127 82.83 222T438-148Zm288-106q21.33-23.33 37.67-49.83 16.33-26.5 27.5-55.34 11.16-28.83 16.66-59.16 5.5-30.34 5.5-61.67 0-103.33-56.83-188T604.67-791.33V-774q0 34.33-23.84 59.5-23.83 25.17-58.16 25.17H438v84.66q0 17-12.83 28.17-12.84 11.17-29.84 11.17h-82V-480h252q17 0 28.17 12.5 11.17 12.5 11.17 29.5v124.67h42q28 0 49.66 16.5Q718-280.33 726-254Z" />
+          <path
+            d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-42-68v-80.67q-34.33 0-58.17-25.16Q356-279 356-313.33V-356L155.33-556.67q-4.33 19.34-6.5 38.34-2.16 19-2.16 38.33 0 127 82.83 222T438-148Zm288-106q21.33-23.33 37.67-49.83 16.33-26.5 27.5-55.34 11.16-28.83 16.66-59.16 5.5-30.34 5.5-61.67 0-103.33-56.83-188T604.67-791.33V-774q0 34.33-23.84 59.5-23.83 25.17-58.16 25.17H438v84.66q0 17-12.83 28.17-12.84 11.17-29.84 11.17h-82V-480h252q17 0 28.17 12.5 11.17 12.5 11.17 29.5v124.67h42q28 0 49.66 16.5Q718-280.33 726-254Z"
+          />
         </symbol>
       </defs>
     </svg>
-    <div class="toggle-container">
-      <div class="toggle">
-        <div class="toggle-button" id="toggleButton"></div>
-        <div class="toggle-option" id="option-dark" onclick="toggleOption('option-dark')">Dark</div>
-        <div class="toggle-option" id="option-light" onclick="toggleOption('option-light')">Light</div>
-      </div>
-    </div>
-    <div class="container">
-      <h1>Icons</h1>
-      <div class="link-with-dropdown">
-        <div class="dropdown-menu">
-          <div class="dropdown-label" onclick="toggleDropdown(event)">
-            <a><span class="text">Icons by devicon</span></a>
-          </div>
-          <div class="dropdown-content">
-            <a href="https://devicon.dev/" target="_blank">
-              <svg class="icon">
-                <use href="#icon1"></use></svg
-              ><span class="text">Website</span></a
-            >
-            <a href="https://github.com/devicons/devicon" target="_blank"><img src="icons/github-original.svg" alt="" /><span class="text">Github</span></a>
+
+    <div class="main-content">
+      <nav id="table-of-contents" class="table-of-contents">
+        <div class="toggle-container">
+          <div class="toggle">
+            <div class="toggle-button" id="toggleButton"></div>
+            <div class="toggle-option" id="option-dark" onclick="toggleOption('option-dark')">Dark</div>
+            <div class="toggle-option" id="option-light" onclick="toggleOption('option-light')">Light</div>
           </div>
         </div>
-      </div>
-      <div class="link-with-dropdown">
-        <div class="dropdown-menu">
-          <div class="dropdown-label" onclick="toggleDropdown(event)">
-            <a><span class="text">Icons by Google</span></a>
-          </div>
-          <div class="dropdown-content">
-            <a href="https://fonts.google.com/icons" target="_blank">
-              <svg class="icon">
-                <use href="#icon1"></use></svg
-              ><span class="text">Website</span></a
-            >
-            <a href="https://github.com/google/material-design-icons" target="_blank"><img src="icons/github-original.svg" alt="" /><span class="text">Github</span></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="link-with-dropdown">
-        <div class="dropdown-menu">
-          <div class="dropdown-label" onclick="toggleDropdown(event)">
-            <a><span class="text">Icons by Feather</span></a>
-          </div>
-          <div class="dropdown-content">
-            <a href="https://feathericons.com/" target="_blank">
-              <svg class="icon">
-                <use href="#icon1"></use></svg
-              ><span class="text">Website</span></a
-            >
-            <a href="https://github.com/feathericons/feather" target="_blank"><img src="icons/github-original.svg" alt="" /><span class="text">Github</span></a>
+        <p>Table of content</p>
+      </nav>
+      <div class="container">
+        <h1>Icons</h1>
+        <div class="link-with-dropdown">
+          <div class="dropdown-menu">
+            <div class="dropdown-label" onclick="toggleDropdown(event)">
+              <a
+                ><img src="https://devicon.dev/logos/favicon.ico" alt="" /><span class="text">Icons by devicon</span></a
+              >
+            </div>
+            <div class="dropdown-content">
+              <a href="https://devicon.dev/" target="_blank">
+                <svg class="icon">
+                  <use href="#icon1"></use></svg
+                ><span class="text">Website</span></a
+              >
+              <a href="https://github.com/devicons/devicon" target="_blank"
+                ><img src="icons/github-original.svg" alt="" /><span class="text">Github</span></a
+              >
+            </div>
           </div>
         </div>
+        <div class="link-with-dropdown">
+          <div class="dropdown-menu">
+            <div class="dropdown-label" onclick="toggleDropdown(event)">
+              <a
+                ><img
+                  src="https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/google/google-original.svg"
+                  alt=""
+                /><span class="text">Icons by Google</span></a
+              >
+            </div>
+            <div class="dropdown-content">
+              <a href="https://fonts.google.com/icons" target="_blank">
+                <svg class="icon">
+                  <use href="#icon1"></use></svg
+                ><span class="text">Website</span></a
+              >
+              <a href="https://github.com/google/material-design-icons" target="_blank"
+                ><img src="icons/github-original.svg" alt="" /><span class="text">Github</span></a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="link-with-dropdown">
+          <div class="dropdown-menu">
+            <div class="dropdown-label" onclick="toggleDropdown(event)">
+              <a
+                ><img src="https://feathericons.com/favicon-32x32.png" alt="" /><span class="text"
+                  >Icons by Feather</span
+                ></a
+              >
+            </div>
+            <div class="dropdown-content">
+              <a href="https://feathericons.com/" target="_blank">
+                <svg class="icon">
+                  <use href="#icon1"></use></svg
+                ><span class="text">Website</span></a
+              >
+              <a href="https://github.com/feathericons/feather" target="_blank"
+                ><img src="icons/github-original.svg" alt="" /><span class="text">Github</span></a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="link-with-dropdown">
+          <div class="dropdown-menu">
+            <div class="dropdown-label" onclick="toggleDropdown(event)">
+              <a
+                ><img src="https://heroicons.com/_next/static/media/favicon-32x32.2a23e45f.png" alt="" /><span
+                  class="text"
+                  >heroicons (+Figma)</span
+                ></a
+              >
+            </div>
+            <div class="dropdown-content">
+              <a href="https://heroicons.com/" target="_blank">
+                <svg class="icon">
+                  <use href="#icon1"></use></svg
+                ><span class="text">Website</span></a
+              >
+              <a href="https://github.com/tailwindlabs/heroicons" target="_blank"
+                ><img src="icons/github-original.svg" alt="" /><span class="text">Github</span></a
+              >
+            </div>
+          </div>
+        </div>
+
+        <a href="https://www.streamlinehq.com/" target="_blank"
+          ><img src="https://www.streamlinehq.com/favicons/favicon.svg" alt="" /><span class="text"
+            >Streamlinehq</span
+          ></a
+        >
+        <a href="https://iconmonstr.com" target="_blank">
+          <img
+            src="https://iconmonstr.com/wp-content/themes/iconmonstr/assets/ico/2.0.0/favicon.ico"
+            alt="iconmonstr"
+          /><span class="text">iconmonstr</span></a
+        >
+        <a href="https://fontawesome.com/icons" target="_blank">
+          <img src="https://fontawesome.com/images/favicon/icon.svg" alt="fontawesome icons" /><span class="text"
+            >fontawesome icons</span
+          ></a
+        >
+        <h1>Social Media</h1>
+        <a href="https://desktop.telegram.org/?setln=en" target="_blank">
+          <img src="icons/Telegram.svg" alt="Telegram" />
+          <span class="text">Telegram</span>
+        </a>
+        <a href="https://discord.com/download" target="_blank">
+          <img src="icons/Discord.svg" alt="Discord" />
+          <span class="text">Discord</span>
+        </a>
+
+        <h1>Entertainment</h1>
+        <a href="https://github.com/SpotX-Official/SpotX" target="_blank">
+          <img src="icons/Spotify.svg" alt="Spotify" />
+          <span class="text">Spotify</span>
+        </a>
+        <a href="https://store.steampowered.com/about/" target="_blank">
+          <img src="icons/Steam.svg" alt="Steam" />
+          <span class="text">Steam</span>
+        </a>
+        <a href="https://store.epicgames.com/en-US/download" target="_blank">
+          <img src="icons/Epic Games.svg" alt="Epic Games Launcher" />
+          <span class="text">Epic Games Launcher</span>
+        </a>
+
+        <h1>Other</h1>
+        <a href="https://windscribe.com/download" target="_blank">
+          <img src="https://windscribe.com/icons/icon-48x48.png?v=a0af6c75bc95cb2deb4536a5963856b4" alt="" />
+          <span class="text">Windscribe</span>
+        </a>
+        <a href="https://www.google.by/intl/ru/chrome/" target="_blank">
+          <img src="icons/Google Chrome.svg" alt="Chrome" />
+          <span class="text">Chrome</span>
+        </a>
+        <a href="https://www.nvidia.com/Download/index.aspx?lang=ru" target="_blank">
+          <img src="icons/nvidia.svg" alt="Nvidia" />
+          <span class="text">Nvidia</span>
+        </a>
+        <a href="https://www.logitechg.com/en-us/innovation/g-hub.html" target="_blank">
+          <img src="icons/logitech.svg" alt="Logitech G HUB" />
+          <span class="text">Logitech G HUB</span>
+        </a>
+        <a
+          href="https://red-square.org/keyrox-tkl-classic-b.html#:~:text=USB%202.0%20%D0%9F%D0%BE%D1%80%D1%82-,%D0%94%D0%A0%D0%90%D0%99%D0%92%D0%95%D0%A0,-%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B5%20%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%BB%D1%8F"
+          target="_blank"
+        >
+          <span class="text">Red Square software</span>
+        </a>
+
+        <h1>Coding</h1>
+        <h3>IDE</h3>
+        <a
+          href="https://visualstudio.microsoft.com/ru/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&passive=false&cid=2030"
+          target="_blank"
+        >
+          <img src="icons/visualstudio-plain.svg" alt="Visual Studio" />
+          <span class="text">Visual Studio</span>
+        </a>
+        <a href="https://code.visualstudio.com/download" target="_blank">
+          <img src="icons/vscode-original.svg" alt="VS Code" />
+          <span class="text">VS Code</span>
+        </a>
+        <a href="https://www.jetbrains.com/pycharm/download/?section=windows" target="_blank">
+          <img src="icons/pycharm.svg" alt="PyCharm" />
+          <span class="text">PyCharm</span>
+        </a>
+        <a href="https://www.sublimetext.com/download" target="_blank">
+          <img src="icons/Simlime Text.svg" alt="Sublime Text" />
+          <span class="text">Sublime Text</span>
+        </a>
+        <a href="https://atom-editor.cc/" target="_blank">
+          <img src="icons/Atom.svg" alt="Atom" />
+          <span class="text">Atom</span>
+        </a>
+
+        <h3>Programming languages & frameworks</h3>
+        <a href="https://www.python.org/downloads/" target="_blank">
+          <img src="icons/python.svg" alt="Python" />
+          <span class="text">Python</span>
+        </a>
+        <a href="https://nodejs.org/en/download/package-manager" target="_blank">
+          <img src="icons/nodejs.svg" alt="Node.js" />
+          <span class="text">Node.js</span>
+        </a>
+        <a href="https://www.ruby-lang.org/en/downloads/">
+          <img src="icons/Property 1=ruby-original.svg" alt="Ruby" />
+          <span class="text">Ruby</span>
+        </a>
+        <a href="https://www.java.com/en/download/" target="_blank">
+          <img src="icons/java.svg" alt="Java" />
+          <span class="text">Java</span>
+        </a>
+        <a href="https://react.dev/learn/installation" target="_blank">
+          <img src="icons/Programming logos and icons by hrhasnai (35).svg" alt="React" />
+          <span class="text">React</span>
+        </a>
+        <a href="https://www.mysql.com/downloads/">
+          <img src="icons/mysql.svg" alt="mySQL" />
+          <span class="text">mySQL</span>
+        </a>
+
+        <h3>Tools</h3>
+        <a href="https://git-scm.com/downloads" target="_blank">
+          <img src="icons/git.svg" alt="git" />
+          <span class="text">git</span>
+        </a>
+        <a href="https://releases.llvm.org/download.html" target="_blank">
+          <span class="text">LLVM</span>
+        </a>
+
+        <h1>Windows</h1>
+        <a href="https://www.microsoft.com/en-us/software-download/windows10" target="_blank">
+          <img src="icons/windows8-original.svg" alt="Windows 10" />
+          <span class="text">Windows 10</span>
+        </a>
+        <a href="https://www.microsoft.com/software-download/windows11" target="_blank">
+          <img src="icons/Windows 11.svg" alt="Windows 11" />
+          <span class="text">Windows 11</span>
+        </a>
+        <a href="run_as_admin_windows_activation.bat" download>
+          <img src="icons/Microsoft.svg" alt="Windows Activation" />
+          <span class="text">Windows Activation</span>
+        </a>
+        <a href="MS Office 2021.rar" download="">
+          <img src="icons/Microsoft Word.svg" alt="MS Office" />
+          <span class="text">MS Office</span>
+        </a>
       </div>
-      <a href="https://www.streamlinehq.com/?ref=feathericons&utm_source=feather-icons&utm_medium=partner&utm_campaign=expand-your-collection-170000-icons&tab=all" target="_blank"><span class="text">Streamlinehq</span></a>
-      <h1>Social Media</h1>
-      <a href="https://desktop.telegram.org/?setln=en" target="_blank">
-        <img src="icons/Telegram.svg" alt="Telegram" />
-        <span class="text">Telegram</span>
-      </a>
-      <a href="https://discord.com/download" target="_blank">
-        <img src="icons/Discord.svg" alt="Discord" />
-        <span class="text">Discord</span>
-      </a>
-
-      <h1>Entertainment</h1>
-      <a href="https://github.com/SpotX-Official/SpotX" target="_blank">
-        <img src="icons/Spotify.svg" alt="Spotify" />
-        <span class="text">Spotify</span>
-      </a>
-      <a href="https://store.steampowered.com/about/" target="_blank">
-        <img src="icons/Steam.svg" alt="Steam" />
-        <span class="text">Steam</span>
-      </a>
-      <a href="https://store.epicgames.com/en-US/download" target="_blank">
-        <img src="icons/Epic Games.svg" alt="Epic Games Launcher" />
-        <span class="text">Epic Games Launcher</span>
-      </a>
-
-      <h1>Other</h1>
-      <a href="https://windscribe.com/download" target="_blank">
-        <span class="text">Windscribe</span>
-      </a>
-      <a href="https://www.google.by/intl/ru/chrome/" target="_blank">
-        <img src="icons/Google Chrome.svg" alt="Chrome" />
-        <span class="text">Chrome</span>
-      </a>
-      <a href="https://www.nvidia.com/Download/index.aspx?lang=ru" target="_blank">
-        <img src="icons/nvidia.svg" alt="Nvidia" />
-        <span class="text">Nvidia</span>
-      </a>
-      <a href="https://www.logitechg.com/en-us/innovation/g-hub.html" target="_blank">
-        <img src="icons/logitech.svg" alt="Logitech G HUB" />
-        <span class="text">Logitech G HUB</span>
-      </a>
-      <a href="https://red-square.org/keyrox-tkl-classic-b.html#:~:text=USB%202.0%20%D0%9F%D0%BE%D1%80%D1%82-,%D0%94%D0%A0%D0%90%D0%99%D0%92%D0%95%D0%A0,-%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B5%20%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%BB%D1%8F" target="_blank">
-        <span class="text">Red Square software</span>
-      </a>
-
-      <h1>Coding</h1>
-      <h3>IDE</h3>
-      <a href="https://visualstudio.microsoft.com/ru/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&passive=false&cid=2030" target="_blank">
-        <img src="icons/visualstudio-plain.svg" alt="Visual Studio" />
-        <span class="text">Visual Studio</span>
-      </a>
-      <a href="https://code.visualstudio.com/download" target="_blank">
-        <img src="icons/vscode-original.svg" alt="VS Code" />
-        <span class="text">VS Code</span>
-      </a>
-      <a href="https://www.jetbrains.com/pycharm/download/?section=windows" target="_blank">
-        <img src="icons/pycharm.svg" alt="PyCharm" />
-        <span class="text">PyCharm</span>
-      </a>
-      <a href="https://www.sublimetext.com/download" target="_blank">
-        <img src="icons/Simlime Text.svg" alt="Sublime Text" />
-        <span class="text">Sublime Text</span>
-      </a>
-      <a href="https://atom-editor.cc/" target="_blank">
-        <img src="icons/Atom.svg" alt="Atom" />
-        <span class="text">Atom</span>
-      </a>
-
-      <h3>Programming languages & frameworks</h3>
-      <a href="https://www.python.org/downloads/" target="_blank">
-        <img src="icons/python.svg" alt="Python" />
-        <span class="text">Python</span>
-      </a>
-      <a href="https://nodejs.org/en/download/package-manager" target="_blank">
-        <img src="icons/nodejs.svg" alt="Node.js" />
-        <span class="text">Node.js</span>
-      </a>
-      <a href="https://www.ruby-lang.org/en/downloads/">
-        <img src="icons/Property 1=ruby-original.svg" alt="Ruby" />
-        <span class="text">Ruby</span>
-      </a>
-      <a href="https://www.java.com/en/download/" target="_blank">
-        <img src="icons/java.svg" alt="Java" />
-        <span class="text">Java</span>
-      </a>
-      <a href="https://react.dev/learn/installation" target="_blank">
-        <img src="icons/Programming logos and icons by hrhasnai (35).svg" alt="React" />
-        <span class="text">React</span>
-      </a>
-      <a href="https://www.mysql.com/downloads/">
-        <img src="icons/mysql.svg" alt="mySQL" />
-        <span class="text">mySQL</span>
-      </a>
-
-      <h3>Tools</h3>
-      <a href="https://git-scm.com/downloads" target="_blank">
-        <img src="icons/git.svg" alt="git" />
-        <span class="text">git</span>
-      </a>
-      <a href="https://releases.llvm.org/download.html" target="_blank">
-        <span class="text">LLVM</span>
-      </a>
-
-      <h1>Windows</h1>
-      <a href="https://www.microsoft.com/en-us/software-download/windows10" target="_blank">
-        <img src="icons/windows8-original.svg" alt="Windows 10" />
-        <span class="text">Windows 10</span>
-      </a>
-      <a href="https://www.microsoft.com/software-download/windows11" target="_blank">
-        <img src="icons/Windows 11.svg" alt="Windows 11" />
-        <span class="text">Windows 11</span>
-      </a>
-      <a href="run_as_admin_windows_activation.bat" download>
-        <img src="icons/Microsoft.svg" alt="Windows Activation" />
-        <span class="text">Windows Activation</span>
-      </a>
-      <a href="MS Office 2021.rar" download="">
-        <img src="icons/Microsoft Word.svg" alt="MS Office" />
-        <span class="text">MS Office</span>
-      </a>
     </div>
 
     <script>
@@ -238,6 +309,29 @@
             menu.classList.remove("open");
           });
         }
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const toc = document.getElementById("table-of-contents");
+        const headers = document.querySelectorAll("h1");
+
+        if (headers.length === 0) return; // Exit if no headers are found
+
+        const tocList = document.createElement("ul");
+
+        headers.forEach((header) => {
+          const id = header.textContent.trim().toLowerCase().replace(/\s+/g, "-");
+          header.id = id;
+
+          const listItem = document.createElement("li");
+          const link = document.createElement("a");
+          link.href = `#${id}`;
+          link.textContent = header.textContent;
+          listItem.appendChild(link);
+          tocList.appendChild(listItem);
+        });
+
+        toc.appendChild(tocList);
       });
     </script>
   </body>
